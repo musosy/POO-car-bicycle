@@ -21,4 +21,10 @@ echo $myCar->brake()."<br>";
 
 echo $someoneCar->getColor()."<br>";
 echo $aBike->getColor();
+
+echo $aBike->forward();
+echo $aBike->forward();
+echo $aBike->forward();
+echo $aBike->brake();
+
 ?>
