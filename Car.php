@@ -6,7 +6,7 @@ class Car
     private int $currentSpeed = 0;
     private string $color;
     private int $nbSeats;
-    private string $energy;
+    private int $energy;
     private sting $energyLevel;
 
     public function __construct(string $color, int $nbSeats, string $energy)
