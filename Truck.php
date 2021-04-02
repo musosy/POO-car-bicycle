@@ -1,7 +1,7 @@
 <?php
 require_once 'Car.php';
 
-class Truck extends Car /* extends Car pour récupérer le contruct et get/set d'energy */
+final class Truck extends Car /* extends Car pour récupérer le contruct et get/set d'energy */
 {
     private int $capacity;
     private int $currentStock = 0;

@@ -9,7 +9,7 @@ class Car extends Vehicle
     ];
     protected string $energyLevel;
 
-    public function __construct(string $color, int $nbSeats, string $energy)
+    final public function __construct(string $color, int $nbSeats, string $energy)
     {
         parent::__construct($color, $nbSeats);
         $this->setEnergy($energy);
