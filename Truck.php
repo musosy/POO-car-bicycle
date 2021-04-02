@@ -1,6 +1,4 @@
 <?php
-require_once 'Car.php';
-
 final class Truck extends Car /* extends Car pour récupérer le contruct et get/set d'energy */
 {
     private int $capacity;

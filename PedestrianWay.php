@@ -1,5 +1,4 @@
 <?php 
-require_once 'HighWay.php';
 
 final class PedestrianWay extends HighWay
 {
@@ -9,7 +8,7 @@ final class PedestrianWay extends HighWay
         $this->setNbLane(1);
         $this->setMaxSpeed(10);
     }
-    public function addVehicle(Vehicle $vehicle): PedestrianWay
+    final public function addVehicle(Vehicle $vehicle): PedestrianWay
     {
         if ($vehicle instanceof Bicycle) {
             $newVehicles = $this->getCurrentVehicles();

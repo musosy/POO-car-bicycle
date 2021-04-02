@@ -1,6 +1,4 @@
 <?php
-require_once 'Vehicle.php';
-
 abstract class HighWay
 {
     private array $currentVehicles;
@@ -56,3 +54,7 @@ abstract class HighWay
     abstract public function addVehicle(Vehicle $vehicleType);
     
 }
+
+require_once 'MotorWay.php';
+require_once 'PedestrianWay.php';
+require_once 'ResidentialWay.php';

@@ -1,5 +1,4 @@
 <?php 
-require_once 'HighWay.php';
 
 final class MotorWay extends HighWay
 {
@@ -9,7 +8,7 @@ final class MotorWay extends HighWay
         $this->setMaxSpeed(130);
     }
 
-    public function addVehicle(Vehicle $vehicle): MotorWay
+    final public function addVehicle(Vehicle $vehicle): MotorWay
     {
         if ($vehicle instanceof Car) {
             $newVehicles = $this->getCurrentVehicles();

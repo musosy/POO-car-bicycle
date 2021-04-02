@@ -1,5 +1,4 @@
 <?php 
-require_once 'HighWay.php';
 
 final class ResidentialWay extends HighWay
 {
@@ -10,7 +9,7 @@ final class ResidentialWay extends HighWay
         $this->setMaxSpeed(50);
     }
     
-    public function addVehicle(Vehicle $vehicle): ResidentialWay
+    final public function addVehicle(Vehicle $vehicle): ResidentialWay
     {
         
         $newVehicles = $this->getCurrentVehicles();
