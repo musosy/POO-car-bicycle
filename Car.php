@@ -7,7 +7,7 @@ class Car extends Vehicle
         'fuel',
         'electic'
     ];
-    protected sting $energyLevel;
+    protected string $energyLevel;
 
     public function __construct(string $color, int $nbSeats, string $energy)
     {

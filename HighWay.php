@@ -1,4 +1,5 @@
 <?php
+require_once 'Vehicle.php';
 
 abstract class HighWay
 {
@@ -6,19 +7,17 @@ abstract class HighWay
     private int $nbLane;
     private int $maxSpeed;
 
-    /**
-     * Get the value of maxSpeed
-     */ 
+    public function __construct() 
+    {
+        $this->setCurrentVehicles(array());
+    }
+    
     public function getMaxSpeed()
     {
         return $this->maxSpeed;
     }
 
-    /**
-     * Set the value of maxSpeed
-     *
-     * @return  self
-     */ 
+    
     public function setMaxSpeed($maxSpeed)
     {
         $this->maxSpeed = $maxSpeed;
@@ -26,19 +25,13 @@ abstract class HighWay
         return $this;
     }
 
-    /**
-     * Get the value of currentVehicles
-     */ 
+    
     public function getCurrentVehicles()
     {
         return $this->currentVehicles;
     }
 
-    /**
-     * Set the value of currentVehicles
-     *
-     * @return  self
-     */ 
+    
     public function setCurrentVehicles($currentVehicles)
     {
         $this->currentVehicles = $currentVehicles;
@@ -46,19 +39,13 @@ abstract class HighWay
         return $this;
     }
 
-    /**
-     * Get the value of nbLane
-     */ 
+    
     public function getNbLane()
     {
         return $this->nbLane;
     }
 
-    /**
-     * Set the value of nbLane
-     *
-     * @return  self
-     */ 
+
     public function setNbLane($nbLane)
     {
         $this->nbLane = $nbLane;
@@ -66,6 +53,6 @@ abstract class HighWay
         return $this;
     }
 
-    abstract public function addVehicle(string $vehicleType);
+    abstract public function addVehicle(Vehicle $vehicleType);
     
 }

@@ -4,13 +4,18 @@ require_once 'HighWay.php';
 final class MotorWay extends HighWay
 {
     public function __construct()
-    {
+    {   parent::__construct();
         $this->setNbLane(4);
         $this->setMaxSpeed(130);
     }
 
-    public function addVehicle(string $vehicleType)
+    public function addVehicle(Vehicle $vehicle): MotorWay
     {
-        $vehicleType instanceof Car ? array_push($this->getCurrentVehicles(), $vehicleType) : false;
+        if ($vehicle instanceof Car) {
+            $newVehicles = $this->getCurrentVehicles();
+            array_push($newVehicles, $vehicle);
+            $this->setCurrentVehicles($newVehicles);
+        }
+        return $this;
     }
 }
