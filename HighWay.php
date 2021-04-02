@@ -55,6 +55,6 @@ abstract class HighWay
     
 }
 
-require_once 'MotorWay.php';
-require_once 'PedestrianWay.php';
-require_once 'ResidentialWay.php';
+foreach (glob("Highway/*.php") as $filename) {
+    include $filename;
+}
