@@ -8,11 +8,11 @@ class Car extends Vehicle
     protected string $energyLevel;
     private bool $hasCarBrake;
 
-    final public function __construct(string $color, int $nbSeats, string $energy)
+    final public function __construct(string $color, int $nbSeats, string $energy, bool $hasCarBrake = true)
     {
         parent::__construct($color, $nbSeats);
         $this->setEnergy($energy);
-        $this->setHasCarBrake(false);
+        $this->setHasCarBrake($hasCarBrake);
     }
 
   
@@ -61,7 +61,7 @@ class Car extends Vehicle
 
     public function start()
     {
-        if(!$this->getHasCarBrake()) {
+        if($this->getHasCarBrake()) {
             throw new Exception("Car brake is on");
         }
         else return parent::forward();
