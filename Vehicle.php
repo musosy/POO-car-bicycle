@@ -33,7 +33,7 @@ class Vehicle {
 
         return "GO !";
     }
-
+    
     public function brake(): string {
         $sentence = "";
         while($this->currentSpeed > 0) {
@@ -48,3 +48,4 @@ class Vehicle {
 foreach (glob("Vehicles/*.php") as $filename) {
     include $filename;
 }
+
