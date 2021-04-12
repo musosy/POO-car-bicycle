@@ -1,17 +1,18 @@
 <?php
 class Car extends Vehicle
-{
-    
+{   
     public const ALLOWED_ENERGIES = [
         'fuel',
         'electic'
     ];
     protected string $energyLevel;
+    private bool $hasCarBrake;
 
     final public function __construct(string $color, int $nbSeats, string $energy)
     {
         parent::__construct($color, $nbSeats);
         $this->setEnergy($energy);
+        $this->setHasCarBrake(false);
     }
 
   
@@ -37,4 +38,32 @@ class Car extends Vehicle
     }
 
 
+
+    /**
+     * Get the value of hasCarBrake
+     */ 
+    public function getHasCarBrake()
+    {
+        return $this->hasCarBrake;
+    }
+
+    /**
+     * Set the value of hasCarBrake
+     *
+     * @return  self
+     */ 
+    public function setHasCarBrake($hasCarBrake)
+    {
+        $this->hasCarBrake = $hasCarBrake;
+
+        return $this;
+    }
+
+    public function start()
+    {
+        if(!$this->getHasCarBrake()) {
+            throw new Exception("Car brake is on");
+        }
+        else return parent::forward();
+    }
 }
