@@ -24,7 +24,7 @@ try {
 } catch (Exception $e) {
     echo "Error: " . $e->getMessage() . ".<br>";
     echo "Removing car brake ... <br>";
-    $car->setHasCarBrake(true);
+    $car->setHasCarBrake(false);
 } finally {
     echo "Ma voiture roule comme un donut.\n";
 }
