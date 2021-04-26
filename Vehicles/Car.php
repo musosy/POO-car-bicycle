@@ -1,5 +1,5 @@
 <?php
-class Car extends Vehicle
+class Car extends Vehicle implements LightableInterface
 {   
     public const ALLOWED_ENERGIES = [
         'fuel',
