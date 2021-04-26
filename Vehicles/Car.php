@@ -66,4 +66,12 @@ class Car extends Vehicle implements LightableInterface
         }
         else return parent::forward();
     }
+    public function switchOn():bool
+    {
+        return true;
+    }
+    public function switchOff():bool
+    {
+        return !$this->switchOn();
+    }
 }

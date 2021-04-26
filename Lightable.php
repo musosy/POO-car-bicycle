@@ -1,13 +1,7 @@
 <?php
 
-class LightableInterface
+interface LightableInterface
 {
-    public function switchOn(int $percentage)
-    {
-        return true;
-    }
-    public function switchOff(int $percentage)
-    {
-        return false;
-    }
+    public function switchOn():bool;
+    public function switchOff():bool;
 }
